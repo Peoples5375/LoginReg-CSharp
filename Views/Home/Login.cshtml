@@ -1,0 +1,16 @@
+@model LoginUser
+<form asp-action="Logged" method ="post">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <p><span asp-validation-for="Email" class="error-red"></span></p>
+        <input type="email" asp-for="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <p><span asp-validation-for="Password" class="error-red"></span></p>
+        <input type="password" asp-for="Password" class="form-control" id="exampleInputPassword1">
+        
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

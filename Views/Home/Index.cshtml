@@ -1,0 +1,37 @@
+﻿@model User
+    <form asp-action="Create" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="inputEmail4">First Name</label>
+        <p><span asp-validation-for="FirstName" class="error-red"></span></p>
+        <input asp-for="FirstName" type="text" class="form-control" id="inputEmail4">
+        </div>
+        <div class="form-group col-md-6">
+        <label for="inputPassword4">Last Name</label>
+        <p><span asp-validation-for="LastName" class="error-red"></span></p>
+        <input asp-for="LastName" type="text" class="form-control" id="inputPassword4">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputAddress">Email</label>
+        <p><span asp-validation-for="Email" class="error-red"></span></p>
+        <input asp-for="Email" type="email" class="form-control" id="inputAddress">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputAddress2">Password</label>
+            <p><span asp-validation-for="Password" class="error-red"></span></p>
+            <input asp-for="Password" type="password" class="form-control" id="inputAddress2">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="inputCity">Confirm Password</label>
+        <p><span asp-validation-for="Password" class="error-red"></span></p>
+        <input asp-for="Confirm" type="password" class="form-control" id="inputCity">
+        </div>
+        
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+    <a href="/Login" class="btn btn-success">Login</a>
+    </form>
